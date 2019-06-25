@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- useUnicode=true&characterEncoding=UTF-8可避免中文乱码 -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/hr_management?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=GMT%2B8&amp;useOldAliasMetadataBehavior=true </property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">goahead357_x8071</property>
+        <!-- 2、数据库操纵信息 -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <!-- 注意dialect的值，否则会出现奇怪的问题 -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hbm2ddl.auto">update</property>
+        <!-- 3、添加实体类映射文件 -->
+        <mapping resource="entity/Employee.hbm.xml"/>
+        <mapping resource="entity/Check.hbm.xml"/>
+        <mapping resource="entity/Department.hbm.xml"/>
+        <mapping resource="entity/Post.hbm.xml"/>
+        <mapping resource="entity/Record.hbm.xml"/>
+        <mapping resource="entity/Salary.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

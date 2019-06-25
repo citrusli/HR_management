@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> <!-- 将Java实体类Student与数据库Hibernate表Student映射 -->
+    <class name="entity.Record" table="record">
+        <!-- 主键 -->
+        <id name="no" column="employee_no" type="java.lang.String" length="6">
+
+        </id>
+        <!-- 非主键属性使用property -->
+        <property name="birth" column="birth_date" type="java.sql.Date"  not-null="true"/>
+        <property name="nation" column="nation" type="java.lang.String"  not-null="true"/>
+        <property name="place" column="birth_place" type="java.lang.String" not-null="true"/>
+        <property name="ID" column="ID" type="java.lang.String" length="18" not-null="true"/>
+        <property name="degree" column="associate_degree" type="java.lang.String" not-null="true"/>
+        <property name="enterDate" column="enter_date" type="java.sql.Date" not-null="true"/>
+        <property name="address" column="address" type="java.lang.String" not-null="true"/>
+        <property name="education" column="education" type="java.lang.String"/>
+        <property name="note" column="notes" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

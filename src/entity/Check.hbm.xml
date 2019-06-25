@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> <!-- 将Java实体类Student与数据库Hibernate表Student映射 -->
+    <class name="entity.Check" table="chck">
+        <!-- 主键 -->
+        <composite-id>
+            <key-property name="no" column="employee_no" type="java.lang.String" length="6"/>
+            <key-property name="date" column="check_d" type="java.sql.Date"/>
+        </composite-id>
+        <!-- 非主键属性使用property -->
+        <property name="check_in" column="checkin" type="java.sql.Time"/>
+        <property name="check_out" column="checkout" type="java.sql.Time"/>
+        <property name="status" column="check_status" type="java.lang.String" length="2" not-null="true"/>
+    </class>
+</hibernate-mapping>

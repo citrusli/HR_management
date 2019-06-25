@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> <!-- 将Java实体类Student与数据库Hibernate表Student映射 -->
+    <class name="entity.Post" table="post">
+        <!-- 主键 -->
+        <id name="no" column="post_no" type="java.lang.String" length="2">
+
+        </id>
+        <!-- 非主键属性使用property -->
+        <property name="name" column="post_name" type="java.lang.String" length="20" not-null="true"/>
+        <property name="salary" column="post_salary" type="java.lang.Double" />
+        <property name="work_content" column="work_content" type="java.lang.String" length="255" not-null="true"/>
+    </class>
+</hibernate-mapping>

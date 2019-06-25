@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> <!-- 将Java实体类Student与数据库Hibernate表Student映射 -->
+    <class name="entity.Salary" table="salary">
+        <!-- 主键 -->
+        <id name="no" column="employee_no" type="java.lang.String" length="6">
+
+        </id>
+        <!-- 非主键属性使用property -->
+        <property name="define" column="define" type="java.lang.String"/>
+        <property name="basic" column="basic_salary" type="java.lang.Double"  not-null="true"/>
+        <property name="post" column="post_salary" type="java.lang.Double" not-null="true"/>
+        <property name="insurance" column="insurance" type="java.lang.Double" not-null="true"/>
+        <property name="allowance" column="allowance" type="java.lang.Double" not-null="true"/>
+        <property name="pension" column="pension" type="java.lang.Double" not-null="true"/>
+    </class>
+</hibernate-mapping>

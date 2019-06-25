@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> <!-- 将Java实体类Student与数据库Hibernate表Student映射 -->
+    <class name="entity.Employee" table="employee">
+        <!-- 主键 -->
+        <id name="no" column="employee_no" type="java.lang.String" length="6">
+
+        </id>
+        <!-- 非主键属性使用property -->
+        <property name="name" column="employee_name" type="java.lang.String" length="20" not-null="true"/>
+        <property name="gender" column="employee_gender" type="java.lang.String" length="1" not-null="true"/>
+        <property name="age" column="employee_age" type="java.lang.Integer" length="2" not-null="true"/>
+        <property name="status" column="employee_status" type="java.lang.String" length="2" not-null="true"/>
+        <property name="tel" column="employee_tel" type="java.lang.String" length="11" not-null="true"/>
+        <property name="password" column="pass" type="java.lang.String" length="20" not-null="true"/>
+    </class>
+</hibernate-mapping>
